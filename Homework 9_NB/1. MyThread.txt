@@ -20,6 +20,7 @@ public class MyThread extends Thread {
 }
 
 
+
 class Main {
     public static void main(String[] args) throws InterruptedException {
         Thread t1 = new MyThread("Hello", 300);
