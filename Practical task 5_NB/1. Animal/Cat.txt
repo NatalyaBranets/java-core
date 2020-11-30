@@ -17,5 +17,4 @@ public class Cat implements Animal {
 	public void feed() {
 		System.out.println("\tPlease feed me vegetables, whole grains, cggs, cheese, meat, fish, avocados");   
 	   }
-	
 }
