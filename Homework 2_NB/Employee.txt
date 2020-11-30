@@ -63,4 +63,5 @@ public int getBonus() {
 	return totalSum / 10;
 }
 
+
 }
