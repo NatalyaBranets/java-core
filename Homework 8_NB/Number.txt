@@ -1,0 +1,70 @@
+package error.softserve;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+class Number {
+/*
+	public double div(double a, double b) throws ArithmeticException {
+		if (b == 0) {
+			throw new ArithmeticException();
+		}
+		return a / b;
+
+	}
+*/
+// 2 part:	
+	
+	public int readNumber(int start, int end) throws OutOfRangeException {
+		int number;
+		Scanner sc = new Scanner(System.in);
+		number = sc.nextInt();
+		if (number > start && number < end) {
+			return number;
+		} else {
+			throw new OutOfRangeException("Number is out of range");
+		}
+	}
+}
+
+public class Homework_1 {
+	public static void main(String[] args) {
+
+		Number number = new Number();
+/*
+		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
+			System.out.print("Please enter first double number:");
+			double a = Double.parseDouble(br.readLine());
+			System.out.print("Please enter second double number:");
+			double b = Double.parseDouble(br.readLine());
+			System.out.println(number.div(a, b));
+		} catch (NumberFormatException | IOException e) {
+			System.out.println("NumberFormatException | IOException");
+			System.out.println("Message = " + e.getMessage());
+		} catch (ArithmeticException a) {
+			System.out.println("ArithmeticException");
+		} catch (Exception e) {
+			System.out.println("Exception");
+		}
+
+*/		
+// 2 part:
+		
+		System.out.println("Please enter 10 positive numbers:");
+		for (int i = 0; i < 10; i++) {
+			try {
+				System.out.println(number.readNumber(1, 10));
+			} catch (OutOfRangeException e) {
+				System.out.println("OutOfRangeException");
+				System.err.println("Number is out of range [1-10]");
+			} catch (InputMismatchException e) {
+				System.out.println("InputMismatchException");
+				System.err.println("Enter only numbers!");
+
+			}
+		}
+	}
+}
