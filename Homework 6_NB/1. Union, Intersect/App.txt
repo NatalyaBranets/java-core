@@ -8,7 +8,6 @@ import java.util.TreeSet;
 class Fruits implements Comparable <Fruits> {
 	
 	private String name;
-
 	
 	public Fruits(String name) {
 		this.name = name;
