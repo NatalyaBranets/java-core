@@ -90,8 +90,6 @@ public class Homework_1_1 {
 }
 
 
-
-
 /*
 4.Condition stateament
 read 3 float numbers and check: are they all belong to the range [-5,5];
